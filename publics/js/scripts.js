@@ -7,6 +7,7 @@ const formElement = getElementById('chat_form');
 
 function helloUser() {
   const userName = prompt('What is your name?');
+  socket.emit('new_user', userName);
 }
 
 function init() {
