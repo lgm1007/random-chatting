@@ -33,6 +33,8 @@ export class ChatsGateway
     @MessageBody() userName: string,
     @ConnectedSocket() socket: Socket,
   ): string {
+    // userName DB에 적재할 것
+    socket.broadcast.emit('user_connected', userName);
     return userName;
   }
 }
