@@ -10,6 +10,15 @@ socket.on('user_connected', (userName) => {
   console.log(`${userName} connected!`);
 });
 
+const handleSubmit = (event) => {
+  event.preventDefault();
+  const inputValue = event.target.elements[0].value;
+  if (inputValue !== '') {
+    socket.emit('submit_chat', inputValue);
+    // 화면에 채팅 그리기
+  }
+};
+
 function helloUser() {
   const userName = prompt('What is your name?');
   socket.emit('new_user', userName, (data) => {
@@ -23,6 +32,8 @@ const drawHelloStranger = (userName) => {
 
 function init() {
   helloUser();
+  // 이벤트 연결
+  formElement.addEventListener('submit', handleSubmit);
 }
 
 init();
