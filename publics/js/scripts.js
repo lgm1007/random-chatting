@@ -14,6 +14,10 @@ socket.on('new_chat', (data) => {
   const { chat, userName } = data;
   drawNewChat(`${userName}: ${chat}`);
 });
+
+socket.on('disconnect_user', (userName) => {
+  drawNewChat(`${userName} is disconnected...`);
+});
 //* /global socket handler
 
 //* 채팅 입력 이벤트
