@@ -46,7 +46,6 @@ $ npm run test:cov
 * socket_model
 ```
 {
-    _id: ds302das3adqwnd93j (ObjectId),
     id: socket.id,
     userName: 사용자 이름
 }
