@@ -16,6 +16,8 @@ const handleSubmit = (event) => {
   if (inputValue !== '') {
     socket.emit('submit_chat', inputValue);
     // 화면에 채팅 그리기
+    drawNewChat(inputValue);
+    formElement.querySelector('input').value = null;
   }
 };
 
@@ -26,9 +28,22 @@ function helloUser() {
   });
 }
 
+//* draw functions
 const drawHelloStranger = (userName) => {
   helloStrangerElement.innerText = `Hello ${userName}!`;
 };
+
+const drawNewChat = (message) => {
+  const wrapperChatBox = document.createElement('div');
+  const chatBox = `
+    <div>
+      ${message}
+    </div>
+  `;
+  wrapperChatBox.innerHTML = chatBox;
+  chattingBoxElement.append(wrapperChatBox);
+};
+//* /draw functions
 
 function init() {
   helloUser();
