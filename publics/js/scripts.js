@@ -9,7 +9,9 @@ const formElement = getElementById('chat_form');
 socket.on('user_connected', (userName) => {
   console.log(`${userName} connected!`);
 });
+//* /global socket handler
 
+//* 채팅 입력 이벤트
 const handleSubmit = (event) => {
   event.preventDefault();
   const inputValue = event.target.elements[0].value;
@@ -20,13 +22,16 @@ const handleSubmit = (event) => {
     formElement.querySelector('input').value = null;
   }
 };
+//* /채팅 입력 이벤트
 
+//* 새로운 유저 접속 이벤트
 function helloUser() {
   const userName = prompt('What is your name?');
   socket.emit('new_user', userName, (data) => {
     drawHelloStranger(data);
   });
 }
+//* /새로운 유저 접속 이벤트
 
 //* draw functions
 const drawHelloStranger = (userName) => {
