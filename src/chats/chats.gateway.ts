@@ -32,7 +32,7 @@ export class ChatsGateway
   handleNewUserEvent(
     @MessageBody() userName: string,
     @ConnectedSocket() socket: Socket,
-  ) {
-    console.log(userName);
+  ): string {
+    return userName;
   }
 }
