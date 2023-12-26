@@ -64,6 +64,9 @@ $ npm run test:cov
 }
 ```
 
+## Application ScreenShot
+![screenshot](https://github.com/lgm1007/random-chatting/assets/57981691/052cb6ec-d181-4376-8bfc-4e4ffabc9c28)
+
 ## 📜License
 
 Nest is [MIT licensed](LICENSE).
