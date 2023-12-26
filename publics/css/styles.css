@@ -1,4 +1,13 @@
 body {
-    background-color: bisque;
+    background-color: #383838;
+}
+
+.bg_nest_color {
+    background-color: #3B82F6;
+}
+
+#hello_stranger {
+    font-size: 2em;
+    font-weight: bold;
 }
 

@@ -42,6 +42,31 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## DB Struct
+* socket_model
+```
+{
+    id: socket.id,
+    userName: 사용자 이름
+}
+```
+
+* chattings_model
+```
+{
+    _id: 1120978jdk391012u (ObjectId),
+    user: {
+        _id: dalkshjdkj30192323j (ObjectId),
+        id: socket.id,
+        userName: 사용자 이름
+    },
+    chat: 채팅 내용
+}
+```
+
+## Application ScreenShot
+![screenshot](https://github.com/lgm1007/random-chatting/assets/57981691/052cb6ec-d181-4376-8bfc-4e4ffabc9c28)
+
 ## 📜License
 
 Nest is [MIT licensed](LICENSE).
