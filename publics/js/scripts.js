@@ -9,6 +9,11 @@ const formElement = getElementById('chat_form');
 socket.on('user_connected', (userName) => {
   console.log(`${userName} connected!`);
 });
+
+socket.on('new_chat', (data) => {
+  const { chat, userName } = data;
+  drawNewChat(`${userName}: ${chat}`);
+});
 //* /global socket handler
 
 //* 채팅 입력 이벤트
@@ -18,7 +23,7 @@ const handleSubmit = (event) => {
   if (inputValue !== '') {
     socket.emit('submit_chat', inputValue);
     // 화면에 채팅 그리기
-    drawNewChat(inputValue);
+    drawNewChat(`me: ${inputValue}`);
     formElement.querySelector('input').value = null;
   }
 };
