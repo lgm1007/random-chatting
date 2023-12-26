@@ -7,7 +7,7 @@ const formElement = getElementById('chat_form');
 
 //* global socket handler
 socket.on('user_connected', (userName) => {
-  console.log(`${userName} connected!`);
+  drawNewChat(`${userName} connected!`);
 });
 
 socket.on('new_chat', (data) => {
