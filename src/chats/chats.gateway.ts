@@ -81,7 +81,7 @@ export class ChatsGateway
     // userName DB에 적재할 것
     socket.broadcast.emit('new_chat', {
       chat: chat,
-      userName: socket.id,
+      userName: socketObj.userName,
     });
   }
 }
