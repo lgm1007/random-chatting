@@ -42,6 +42,29 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
+## DB Struct
+* socket_model
+```
+{
+    _id: ds302das3adqwnd93j (ObjectId),
+    id: socket.id,
+    userName: 사용자 이름
+}
+```
+
+* chattings_model
+```
+{
+    _id: 1120978jdk391012u (ObjectId),
+    user: {
+        _id: dalkshjdkj30192323j (ObjectId),
+        id: socket.id,
+        userName: 사용자 이름
+    },
+    chat: 채팅 내용
+}
+```
+
 ## 📜License
 
 Nest is [MIT licensed](LICENSE).
