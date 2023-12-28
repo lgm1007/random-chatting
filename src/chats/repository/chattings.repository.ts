@@ -13,8 +13,4 @@ export class ChattingsRepository {
   async findAll(): Promise<ChattingModel[]> {
     return this.chattingModel.find();
   }
-
-  async findOne(id): Promise<ChattingModel> {
-    return this.chattingModel.findOne({ id: id });
-  }
 }
