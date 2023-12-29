@@ -24,6 +24,14 @@ export class SocketModel extends Document {
   @IsNotEmpty()
   @IsString()
   userName: string;
+
+  public get getId(): string {
+    return this.id;
+  }
+
+  public get getUserName(): string {
+    return this.userName;
+  }
 }
 
 export const SocketsSchema = SchemaFactory.createForClass(SocketModel);
