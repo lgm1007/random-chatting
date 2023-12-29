@@ -31,7 +31,7 @@ describe('ChattingsRepository', () => {
     expect(mockRepository).toBeDefined();
   });
 
-  it('should return a chatting data', async () => {
+  it('should be called findAll', async () => {
     const spy = jest
       .spyOn(mockRepository, 'findAll')
       .mockResolvedValue(chattings);
