@@ -28,6 +28,10 @@ export class ChattingModel extends Document {
   @IsNotEmpty()
   @IsString()
   chat: string;
+
+  public get getChat(): string {
+    return this.chat;
+  }
 }
 
 export const ChattingsSchema = SchemaFactory.createForClass(ChattingModel);
